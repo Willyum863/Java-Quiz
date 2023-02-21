@@ -1,10 +1,12 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
+var button = document.getElementById('button');
 
-// Timer function
-function countdown() {
-    var timeLeft = 5;
-
+var timeLeft = 5;
+var startQuiz = function(){
+mainEl.remove();
+button.remove();
+    // Timer function
     var timeInterval = setInterval(function () {
       // As long as the `timeLeft` is greater than 1
       if (timeLeft > 1) {
@@ -16,9 +18,11 @@ function countdown() {
         timeLeft--;
       } else {
         // Once `timeLeft` gets to 0, set `timerEl` to an empty string
+        clearInterval(timeInterval);
         timerEl.textContent = 'Time Up!';
       }
     }, 1000);
-  }
-    countdown();
+}
+    
 
+  button.addEventListener("click", startQuiz);
