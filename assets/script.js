@@ -1,7 +1,50 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var button = document.getElementById('button');
-var questionBox = document.querySelector(".questions");
+var questionBox = document.querySelector(".start");
+
+// Questions 
+var questions = [
+    {
+        question: "Inside which HTML element do we put the JavaScript?",
+        optionA: "<script>", // correct
+        optionB: "<js>",
+        optionC: "<javascript>",
+        optionD: "<scripting>"
+    },
+    {
+        question: "How do you write 'Hello World' in an alert box?",
+        optionA: "msgBox('Hello World')",
+        optionB: "alertBox('Hello World')",
+        optionC: "msg('Hello World')",
+        optionD: "alert('Hello World')" //correct
+    },
+    {
+        question: "How does a FOR loop start?",
+        optionA: "for i = 1 to 5",
+        optionB: "for(i=0;i <= 5;i++)", //correct
+        optionC: "for(i = 0;i <= 5)",
+        optionD: "for(i <= 5; i++)"
+    },
+    {
+        question: "Which event occurs when the user clicks on an HTML element?",
+        optionA: "onmouseover",
+        optionB: "onmouseclick",
+        optionC: "onchange",
+        optionD: "onclick"  //correct
+    },
+    {
+        question: "Which operator is used to assign a value to a variable?",
+        optionA: "-",
+        optionB: "=", //correct
+        optionC: "X",
+        optionD: "*"
+    },
+]
+
+
+
+
 
 
 var score = 0;
@@ -290,44 +333,6 @@ getQuestions();
 
 }
 
-// Questions 
-var questions = [
-    {
-        question: "Inside which HTML element do we put the JavaScript?",
-        optionA: "<script>", // correct
-        optionB: "<js>",
-        optionC: "<javascript>",
-        optionD: "<scripting>"
-    },
-    {
-        question: "How do you write 'Hello World' in an alert box?",
-        optionA: "msgBox('Hello World')",
-        optionB: "alertBox('Hello World')",
-        optionC: "msg('Hello World')",
-        optionD: "alert('Hello World')" //correct
-    },
-    {
-        question: "How does a FOR loop start?",
-        optionA: "for i = 1 to 5",
-        optionB: "for(i=0;i <= 5;i++)", //correct
-        optionC: "for(i = 0;i <= 5)",
-        optionD: "for(i <= 5; i++)"
-    },
-    {
-        question: "Which event occurs when the user clicks on an HTML element?",
-        optionA: "onmouseover",
-        optionB: "onmouseclick",
-        optionC: "onchange",
-        optionD: "onclick"  //correct
-    },
-    {
-        question: "Which operator is used to assign a value to a variable?",
-        optionA: "-",
-        optionB: "=", //correct
-        optionC: "X",
-        optionD: "*"
-    },
-]
 
 
 
