@@ -63,7 +63,7 @@ button.remove();
 
     // Get questions function
 var getQuestions = function() {
-    var question = document.createElement("h1");
+    var question = document.createElement("h2");
     question.className = "questions";
     question.innerHTML = questions[0].question + "<br />";
     questionBox.appendChild(question);
@@ -115,7 +115,7 @@ var getQuestions = function() {
 }
 
 var questionTwo = function() {
-    var question = document.createElement("h1");
+    var question = document.createElement("h2");
     question.className = "questions";
     question.innerHTML = questions[1].question + "<br />";
     questionBox.appendChild(question);
@@ -167,7 +167,7 @@ var questionTwo = function() {
 }
 
 var questionThree = function() {
-    var question = document.createElement("h1");
+    var question = document.createElement("h2");
     question.className = "questions";
     question.innerHTML = questions[2].question + "<br />";
     questionBox.appendChild(question);
@@ -219,7 +219,7 @@ var questionThree = function() {
 }
 
 var questionFour = function() {
-    var question = document.createElement("h1");
+    var question = document.createElement("h2");
     question.className = "questions";
     question.innerHTML = questions[3].question + "<br />";
     questionBox.appendChild(question);
@@ -270,7 +270,7 @@ var questionFour = function() {
 }
 
 var questionFive = function() {
-    var question = document.createElement("h1");
+    var question = document.createElement("h2");
     question.className = "questions";
     question.innerHTML = questions[4].question + "<br />";
     questionBox.appendChild(question);
