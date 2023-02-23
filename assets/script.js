@@ -5,46 +5,37 @@ var questionBox = document.querySelector(".start");
 
 // Questions 
 var questions = [
-    {
-        question: "Inside which HTML element do we put the JavaScript?",
+    {   question: "Inside which HTML element do we put the JavaScript?",
         optionA: "<script>", // correct
         optionB: "<js>",
         optionC: "<javascript>",
         optionD: "<scripting>"
     },
-    {
-        question: "How do you write 'Hello World' in an alert box?",
+    {   question: "How do you write 'Hello World' in an alert box?",
         optionA: "msgBox('Hello World')",
         optionB: "alertBox('Hello World')",
         optionC: "msg('Hello World')",
         optionD: "alert('Hello World')" //correct
     },
-    {
-        question: "How does a FOR loop start?",
+    {   question: "How does a FOR loop start?",
         optionA: "for i = 1 to 5",
         optionB: "for(i=0;i <= 5;i++)", //correct
         optionC: "for(i = 0;i <= 5)",
         optionD: "for(i <= 5; i++)"
     },
-    {
-        question: "Which event occurs when the user clicks on an HTML element?",
+    {   question: "Which event occurs when the user clicks on an HTML element?",
         optionA: "onmouseover",
         optionB: "onmouseclick",
         optionC: "onchange",
         optionD: "onclick"  //correct
     },
-    {
-        question: "Which operator is used to assign a value to a variable?",
+    {   question: "Which operator is used to assign a value to a variable?",
         optionA: "-",
         optionB: "=", //correct
         optionC: "X",
         optionD: "*"
     },
 ]
-
-
-
-
 
 
 var score = 0;
@@ -101,21 +92,21 @@ var getQuestions = function() {
         alert("Correct! +10 points");
         score += 10;
         question.remove();
-        answerOne.remove();
-        answerTwo.remove();
-        answerThree.remove();
-        answerFour.remove();
+        optionA.remove();
+        optionB.remove();
+        optionC.remove();
+        optionD.remove();
         questionTwo();
     }
 
-   // var wrong = function () {
-   //     alert("Wrong, -5 points -5 seconds");
-   //     timeLeft -= 5;
-   //     score -= 5;
-   //     if (score < 0) {
-   //         score = 0;
-   //     }
-   // };
+    var wrong = function () {
+      alert("Wrong, -5 points -5 seconds");
+       timeLeft -= 5;
+        score -= 5;
+        if (score < 0) {
+            score = 0;
+        }
+    };
 
     optionA.addEventListener("click", right);
     optionB.addEventListener("click", wrong);
@@ -313,7 +304,7 @@ var questionFive = function() {
         optionC.remove();
         optionD.remove();
         clearInterval(timeInterval);
-        final();
+        endGame();
     }
     var wrong = function () {
         alert("Wrong, -5 points -5 seconds");
@@ -333,8 +324,9 @@ getQuestions();
 
 }
 
+// End game function
+var endGame = function() {
 
-
-
+}
 
 button.addEventListener("click", startQuiz);
